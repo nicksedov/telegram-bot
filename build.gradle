@@ -13,6 +13,7 @@ configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
 	}
+	compile.exclude module: "spring-boot-starter-tomcat"
 }
 
 repositories {
@@ -21,12 +22,15 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'ch.astorm:smtp4j:3.0.1'
-	implementation 'com.sun.mail:jakarta.mail:2.0.1'
-	implementation 'com.sun.activation:jakarta.activation:2.0.1'
+	implementation 'org.springframework.boot:spring-boot-starter-jetty'
+	modules {
+		module("org.springframework.boot:spring-boot-starter-tomcat") {
+			replacedBy("org.springframework.boot:spring-boot-starter-jetty", "Use Jetty instead of Tomcat")
+		}
+	}
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
-	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	providedRuntime 'org.springframework.boot:spring-boot-starter-jetty'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
