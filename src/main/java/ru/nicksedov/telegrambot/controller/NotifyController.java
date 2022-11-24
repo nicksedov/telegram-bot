@@ -22,9 +22,9 @@ public class NotifyController {
     private static final int CHAT_ID = -893187249;
     private static final String TOKEN = "5730532194:AAFPluN4ENc64MuiftC076WKcQmUmMH9iBA";
 
-    private HttpClient httpClient;
+    private final HttpClient httpClient;
 
-    private ObjectMapper jsonMapper;
+    private final ObjectMapper jsonMapper;
 
     public NotifyController(HttpClient httpClient, ObjectMapper jsonMapper) {
         this.httpClient = httpClient;

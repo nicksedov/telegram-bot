@@ -2,10 +2,8 @@ package ru.nicksedov.telegrambot.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.util.MimeTypeUtils;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.util.UriBuilder;
 import org.springframework.web.util.UriComponentsBuilder;
 import ru.nicksedov.telegrambot.pojo.TextMessage;
@@ -22,9 +20,9 @@ public class TelegramService {
     private static final int CHAT_ID = -893187249;
     private static final String TOKEN = "5730532194:AAFPluN4ENc64MuiftC076WKcQmUmMH9iBA";
 
-    private HttpClient httpClient;
+    private final HttpClient httpClient;
 
-    private ObjectMapper jsonMapper;
+    private final ObjectMapper jsonMapper;
 
     public TelegramService(HttpClient httpClient, ObjectMapper jsonMapper) {
         this.httpClient = httpClient;

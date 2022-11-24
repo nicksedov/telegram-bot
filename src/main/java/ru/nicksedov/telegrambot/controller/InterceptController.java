@@ -12,7 +12,7 @@ import java.io.IOException;
 @RestController
 public class InterceptController {
 
-    private TelegramService telegramService;
+    private final TelegramService telegramService;
 
     public InterceptController(TelegramService telegramService) {
         this.telegramService = telegramService;
