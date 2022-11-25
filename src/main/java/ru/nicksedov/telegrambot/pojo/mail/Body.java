@@ -7,4 +7,5 @@ import lombok.Setter;
 @Setter
 public class Body {
     private String text;
+    private String html;
 }

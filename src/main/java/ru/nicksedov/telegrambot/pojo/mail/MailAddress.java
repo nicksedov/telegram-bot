@@ -5,6 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class From {
+public class MailAddress {
+    private String name;
     private String address;
 }

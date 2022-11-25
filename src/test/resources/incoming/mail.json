@@ -1,0 +1,39 @@
+{
+"spf" : "softfail",
+"id" : "454221669405739@mail.yandex.ru",
+"date" : "2022-11-25 22:53:54 +0300 MSK",
+"subject" : "Content-rich message for multiple recipients",
+"resent_date" : "0001-01-01 00:00:00 +0000 UTC",
+"body" : {
+"html" : "<div><div><div> </div></div><div><div><div><span style=\"font-size:20px;line-height:28px\">Заглавие</span></div><div><span style=\"font-size:12px;line-height:18px\">Данное сообщение содержит:</span></div><ul><li><span style=\"font-size:12px;line-height:18px\">HTML-контент</span></li><li><span style=\"font-size:12px;line-height:18px\">Файловое вложение</span></li><li><span style=\"font-size:12px;line-height:18px\">Заголовки From, To, CopyTo, CC</span></li></ul><div><img src=\"cid:101201669405258@24jwihnks63ygbra.sas.yp-c.yandex.net\" style=\"max-width:100%\" /> <img src=\"cid:101191669405258@24jwihnks63ygbra.sas.yp-c.yandex.net\" style=\"height:16px;width:16px\" /> Home  <img src=\"cid:101181669405258@24jwihnks63ygbra.sas.yp-c.yandex.net\" style=\"max-width:100%\" /></div></div></div></div><div> </div><div><em>С уважением,</em></div><div><span style=\"color:#2f4f4f\">Николай Седов</span></div><div> </div>"
+},
+"addresses" : {
+"from" : {
+"address" : "nicksedov@yandex.ru"
+},
+"to" : [ {
+"name" : "SMTP2HTTP Admin",
+"address" : "admin@bestwifi.asuscomm.com"
+} ],
+"cc" : [ {
+"name" : "Nikolay Sedov",
+"address" : "nick.sedov@mail.ru"
+}, {
+"name" : "feedback@nsedov.com",
+"address" : "feedback@nsedov.com"
+} ]
+},
+"embedded_files" : [ {
+"cid" : "101181669405258@24jwihnks63ygbra.sas.yp-c.yandex.net",
+"content_type" : "image/gif; name=\"next.gif\"",
+"data" : "R0lGODlhEAAQANUAAP797/375v332f765vzyyv732f732v322f322vzpqPztuf3yyf3yyv722fvgjPzkmfvkmfzoqPzoqf3tufvdg/zgjPzjmb2EFq51Erd9FLd+FLV7FLV8FLyCFrmAFbuCFqtwEatxEaluEa90Eq1yEqdsEKZrEP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAACcALAAAAAAQABAAAAZkwJNwSCwaj0ji5ZIsdgCd5vADAHyMnqzWMwgMPERNo1FAHAyCggAhyAw3DMaCEF/I7QyOEDPpK/4TCoGCI0IkEogRihESCYwkRCGSISCUDxAWIVIiFQ4iUiclFCWgJyYmpalSQQA7"
+}, {
+"cid" : "101191669405258@24jwihnks63ygbra.sas.yp-c.yandex.net",
+"content_type" : "image/gif; name=\"home.gif\"",
+"data" : "R0lGODlhEAAQAOYAAC5KhUJelzJRg1t5q199r19+r1x5qmB+r2OBsmOBsWiFtWiGtWyKuTdcgDhcgM/V29TY3PT3+tDj9N/r9ubv99fn9d7r9sbR2s7V29Dk9Nfo9eXv997s9vT3+eXw9+30+D5ofD5pfEV2ePn6+lGNcVGMcVWUb2ixS3J3cHN3cHZ4cKnMNNffI/39+5OSgnp5b317bZORgod+VJiOX6ufbKyhb316bZiTgYV+a5yVgIJ8bKKXfp6VgKaYfaKWfvncpfncpv7ktKmZff/ovvHDefDDePLJhffSlf7itPTJhqBQQPr6+v///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAEwALAAAAAAQABAAAAejgEyCg4SFhUo1gkKGhTRKTEJDi4yCSjM9QThIPZRMMj5AOhA6PzuUOUcwEC0QNkc8hjdGL6strC9JN4QxRSqrJsCsKkQugykpD0tLJiwmSyMYKCmEABcdESUkJR0dFwCFAR/i4+MBhQYbFB4i7BQUGwOFDBwWFiEsIBYTHAyFCxoaKjhY0QCgBgWFEmTIIEHACQELMyAoVKAAgQMAMh64WEBQIAA7"
+}, {
+"cid" : "101201669405258@24jwihnks63ygbra.sas.yp-c.yandex.net",
+"content_type" : "image/gif; name=\"prev.gif\"",
+"data" : "R0lGODlhEAAQANUAAP797/375v332f765vzyyv732f732v322f322vzpqPztuf3yyf3yyv722fvgjPzkmfvkmfzoqPzoqf3tufvdg/zgjPzjmb2EFq51Erd9FLd+FLV7FLV8FLyCFrmAFbuCFqtwEatxEaluEa90Eq1yEqdsEKZrEP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAACcALAAAAAAQABAAAAZkwJNwSCwaj0jh5ZIkdgCdpvADAHyknkFg4Ol6PcSMACEoCAwHRKHR0Ag5DMZiIY8T6IyNcDRRKPp9fhODGEMkEhEJiBGMEo4kRCEWEA8gIZYhmUYiDhUiUkIlFCWgQiYmpamlQQA7"
+} ]
+}
