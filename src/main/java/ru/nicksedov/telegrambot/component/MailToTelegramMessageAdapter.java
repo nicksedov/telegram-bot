@@ -1,4 +1,4 @@
-package ru.nicksedov.telegrambot.service;
+package ru.nicksedov.telegrambot.component;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

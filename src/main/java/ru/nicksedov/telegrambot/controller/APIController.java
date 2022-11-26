@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import ru.nicksedov.telegrambot.pojo.mail.MailContent;
 import ru.nicksedov.telegrambot.pojo.telegram.TelegramMessage;
-import ru.nicksedov.telegrambot.service.MailToTelegramMessageAdapter;
-import ru.nicksedov.telegrambot.service.TelegramService;
+import ru.nicksedov.telegrambot.component.MailToTelegramMessageAdapter;
+import ru.nicksedov.telegrambot.component.TelegramService;
 
 import java.io.IOException;
 
@@ -35,12 +35,8 @@ public class APIController {
     }
 
     @PostMapping("/intercept")
-    public ResponseEntity<String> intercept(@RequestBody String content) throws IOException {
-        ObjectMapper mapper = new ObjectMapper();
-        Object jsonDeserialized = mapper.readValue(content, Object.class);
-        String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonDeserialized);
-        logger.info("Accepted message:\n{}", json);
-        return ResponseEntity.ok(json);
+    public ResponseEntity<Void> intercept() {
+        return ResponseEntity.ok().build();
     }
 
     @PostMapping("/publish")

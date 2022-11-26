@@ -1,0 +1,13 @@
+# Telegram configuration
+telegram:
+  chatId: -893187249
+  token: 5730532194:AAFPluN4ENc64MuiftC076WKcQmUmMH9iBA
+
+# Logging configuration
+logging:
+  level:
+    org.springframework.web: INFO
+    # DEBUG option is for enhanced logging of HTTP requests including their body (with JSON formatting for better readability)
+    # INFO option is for one-line notifications on incoming HTTP requests
+    # ERROR option is to suppress notifications
+    ru.nicksedov.telegrambot.component.filter: DEBUG

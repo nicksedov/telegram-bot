@@ -1,4 +1,4 @@
-package ru.nicksedov.telegrambot.service;
+package ru.nicksedov.telegrambot.component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.HttpHeaders;
