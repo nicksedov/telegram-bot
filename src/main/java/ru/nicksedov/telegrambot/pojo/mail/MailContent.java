@@ -18,4 +18,5 @@ public class MailContent {
     private Addresses addresses;
     @JsonProperty("embedded_files")
     private List<EmbeddedFile> embeddedFiles;
+    private List<AttachmentFile> attachments;
 }
