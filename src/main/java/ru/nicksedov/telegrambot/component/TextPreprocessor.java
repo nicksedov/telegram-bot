@@ -1,9 +1,12 @@
 package ru.nicksedov.telegrambot.component;
 
+import org.springframework.stereotype.Service;
+
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.util.function.UnaryOperator;
 
+@Service
 public class TextPreprocessor implements UnaryOperator<String> {
 
     @Override

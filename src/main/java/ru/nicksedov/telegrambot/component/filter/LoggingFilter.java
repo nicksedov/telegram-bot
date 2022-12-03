@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.annotation.Order;
+import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StreamUtils;
 import org.springframework.web.util.ContentCachingRequestWrapper;
@@ -24,16 +25,19 @@ public class LoggingFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest httpServletRequest = (HttpServletRequest) request;
         logger.info("Got HTTP request: {} {}", httpServletRequest.getMethod(), httpServletRequest.getRequestURI());
-        if (logger.isDebugEnabled()) {
+        boolean isPost = HttpMethod.POST.matches(httpServletRequest.getMethod());
+        if (isPost && logger.isDebugEnabled()) {
             // Wrap the request so the controller can read the request content too
-            HttpServletRequestWrapper wrapper = new ContentCachingRequestWrapper((HttpServletRequest) request);
+            HttpServletRequestWrapper wrapper = new ContentCachingRequestWrapper(httpServletRequest);
             // Get the input stream from the wrapper and convert it into byte array
             byte[] body = StreamUtils.copyToByteArray(wrapper.getInputStream());
             // use jackson ObjectMapper to convert the byte array to Map (represents JSON)
-            ObjectMapper mapper = new ObjectMapper();
-            Map<?, ?> jsonDeserialized = mapper.readValue(body, Map.class);
-            String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonDeserialized);
-            logger.debug("Request content:\n{}", json);
+            if (body.length > 0) {
+                ObjectMapper mapper = new ObjectMapper();
+                Map<?, ?> jsonDeserialized = mapper.readValue(body, Map.class);
+                String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonDeserialized);
+                logger.debug("Request content:\n{}", json);
+            }
         }
         chain.doFilter(request, response);
     }

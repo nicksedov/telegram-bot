@@ -1,25 +1,24 @@
 package ru.nicksedov.telegrambot.component;
 
-import net.htmlparser.jericho.Source;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import java.io.UnsupportedEncodingException;
-import java.nio.charset.StandardCharsets;
+import java.nio.charset.Charset;
 import java.util.function.UnaryOperator;
 
 @Service
 public class HtmlPreprocessor implements UnaryOperator<String> {
 
+    private static final Logger logger = LoggerFactory.getLogger(HtmlPreprocessor.class);
+
     @Override
     public String apply(String text) {
-        Source html = new Source(text);
-        String encoding = html.getEncoding();
-        byte[] bytes;
-        try {
-            bytes = html.toString().getBytes(encoding);
-        } catch (UnsupportedEncodingException e) {
-            bytes = ("Unsupported encoding " + encoding).getBytes(StandardCharsets.UTF_8);
-        }
-        return new String(bytes);
+        Document dom = Jsoup.parse(text);
+        Charset charset = dom.charset();
+        logger.debug("Accepted document charset: {}", charset);
+        return text;
     }
 }
