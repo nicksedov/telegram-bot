@@ -11,6 +11,4 @@ logging:
     # INFO option is for one-line notifications on incoming HTTP requests
     # ERROR option is to suppress notifications
     ru.nicksedov.telegrambot.component.filter: DEBUG
-
-mail:
-  encoding: koi9-r
+    ru.nicksedov.telegrambot.controller: DEBUG
