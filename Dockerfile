@@ -4,7 +4,7 @@ WORKDIR /home/gradle
 RUN gradle build || return 1
 
 FROM openjdk:11.0.11-jre
-EXPOSE 8080
+EXPOSE 443
 ENV ARTIFACT_NAME=sbconn-bot.jar
 ENV APP_HOME=/app
 RUN mkdir $APP_HOME
