@@ -10,4 +10,4 @@ ENV APP_HOME=/app
 RUN mkdir $APP_HOME
 COPY --from=BUILD_STAGE /home/gradle/build/libs/*.jar $APP_HOME/$ARTIFACT_NAME
 WORKDIR $APP_HOME
-ENTRYPOINT ["java", "-jar", "$APP_HOME/$ARTIFACT_NAME"]
+ENTRYPOINT ["java", "-jar", "/app/sbconn-bot.jar"]
