@@ -1,1 +1,0 @@
-web: java -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/telegram-bot-1.0.0.jar

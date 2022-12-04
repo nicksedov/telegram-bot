@@ -1,3 +1,6 @@
+server:
+  port: 8080
+
 # Telegram configuration
 telegram:
   chatId: -893187249
